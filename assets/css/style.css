@@ -30,3 +30,7 @@ button {
     color: white;
     cursor: pointer;
 }
+
+button.delete {
+    background-color: #dc3545;
+}

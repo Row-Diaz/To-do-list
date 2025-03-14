@@ -20,3 +20,27 @@ document.getElementById('addTaskBtn').addEventListener('click', () => {
         updateTaskList();
     }
 });
+
+// AGREGANDO  Y BORRANDO TAREAS 
+function updateTaskList() {
+    taskList.innerHTML = '';
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.className = task.completed ? 'completed' : '';
+        li.innerHTML = `
+            <span>${task.id} - ${task.description}</span>
+            <div>
+                <input type="checkbox" ${task.completed ? 'checked' : ''} onclick="toggleTask(${index})">
+                <button class="delete" onclick="deleteTask(${index})">X</button>
+            </div>
+        `;
+        taskList.appendChild(li);
+    });
+    totalTasks.textContent = tasks.length;
+    completedTasks.textContent = tasks.filter(task => task.completed).length;
+}
+
+function deleteTask(index) {
+    tasks.splice(index, 1);
+    updateTaskList();
+}
