@@ -44,3 +44,11 @@ function deleteTask(index) {
     tasks.splice(index, 1);
     updateTaskList();
 }
+
+function toggleTask(index) {
+    tasks[index].completed = !tasks[index].completed;
+    updateTaskList();
+}
+
+// Inicializar la lista de tareas
+updateTaskList();

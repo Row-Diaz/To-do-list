@@ -1,6 +1,6 @@
 body {
-   display: flex;
-   justify-content: center;
+   /* display: flex;
+   justify-content: center; */
    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -9,13 +9,13 @@ body {
 
 .container {
     background: #fff;
-    width: 70%;
+    width: 80%;
     padding: 20px;
     border-radius: 10px;
     border: solid black;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-input /*[type="text"]*/ {
+input[type="text"] {
     width: 70%;
     padding: 10px;
     border-radius: 5px;
